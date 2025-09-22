@@ -7,9 +7,22 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
+  <noscript>
+    <meta http-equiv="refresh" content="0;wishlist.md">
+  </noscript>
 </head>
 <body>
-  <div id="content">Loading...</div>
+  <div id="content">
+    Loading...
+    <br>
+    <noscript>
+      Похоже, Javascript выключен.
+      <br>
+      Здесь должен был произойти редирект на чистный md-файл с вишлистом.
+      <br>
+      Но если ты читаешь этот текст – редирект не произошёл, перейди по ссылке <a href="wishlist.md">wishlist.md</a>
+    </noscript>
+  </div>
 
   <script>
     fetch('wishlist.md')
