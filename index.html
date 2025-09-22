@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wishlist</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
+</head>
+<body>
+  <div id="content">Loading...</div>
+
+  <script>
+    fetch('wishlist.md')
+      .then(res => res.text())
+      .then(md => {
+        const converter = new showdown.Converter();
+        document.getElementById('content').innerHTML = converter.makeHtml(md);
+      })
+      .catch(err => {
+        document.getElementById('content').innerText = 'Error loading Markdown: ' + err;
+      });
+  </script>
+</body>
+</html>

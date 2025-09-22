@@ -1,0 +1,23 @@
+body {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  font-family: monospace;
+  padding: 2rem;
+  margin: 0;
+}
+
+a {
+  color: #569cd6;
+}
+
+h1, h2, h3 {
+  color: #c586c0;
+}
+
+code, pre {
+  background: #252526;
+  padding: 0.5rem;
+  display: block;
+  overflow-x: auto;
+  border-radius: 4px;
+}
