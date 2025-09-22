@@ -7,32 +7,28 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
-  <noscript>
-    <meta http-equiv="refresh" content="0;wishlist.md">
-  </noscript>
 </head>
 <body>
   <div id="content">
-    Loading...
-    <br>
     <noscript>
-      Похоже, Javascript выключен.
+      Похоже, Javascript выключен. Поэтому вместо форматированного markdown будет голый текст:
+      <iframe src="wishlist.md" />
       <br>
-      Здесь должен был произойти редирект на чистный md-файл с вишлистом.
-      <br>
-      Но если ты читаешь этот текст – редирект не произошёл, перейди по ссылке <a href="wishlist.md">wishlist.md</a>
+      <a href="wishlist.md">wishlist.md</a>
     </noscript>
   </div>
 
   <script>
+    const content = document.getElementById('content');
+    content.innerText = 'Загрузка...'
     fetch('wishlist.md')
       .then(res => res.text())
       .then(md => {
         const converter = new showdown.Converter();
-        document.getElementById('content').innerHTML = converter.makeHtml(md);
+        content.innerHTML = converter.makeHtml(md);
       })
       .catch(err => {
-        document.getElementById('content').innerText = 'Error loading Markdown: ' + err;
+        content.innerText = 'Error loading Markdown: ' + err;
       });
   </script>
 </body>
