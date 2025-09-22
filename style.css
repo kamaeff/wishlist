@@ -87,4 +87,33 @@ th {
 
 img {
   max-width: 100%;
- 
+  display: block;
+  margin: 1em 0;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+    font-size: 1.1em;
+  }
+
+  h1 { font-size: 1.75em; }
+  h2 { font-size: 1.4em; }
+  h3 { font-size: 1.2em; }
+  h4 { font-size: 1.05em; }
+
+  pre, code {
+    font-size: 0.95em;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  th, td {
+    white-space: nowrap;
+  }
+}
