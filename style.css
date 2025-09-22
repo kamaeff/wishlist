@@ -5,6 +5,10 @@ body {
   line-height: 1.6;
   padding: 2rem;
   margin: 0;
+  font-size: 16px;
+  max-width: 80ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 a {
@@ -95,13 +99,16 @@ img {
 @media (max-width: 768px) {
   body {
     padding: 1rem;
-    font-size: 1.1em;
+    font-size: 1.2em;
+    max-width: 45ch;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  h1 { font-size: 1.75em; }
-  h2 { font-size: 1.4em; }
-  h3 { font-size: 1.2em; }
-  h4 { font-size: 1.05em; }
+  h1 { font-size: 1.8em; }
+  h2 { font-size: 1.5em; }
+  h3 { font-size: 1.3em; }
+  h4 { font-size: 1.1em; }
 
   pre, code {
     font-size: 0.95em;
